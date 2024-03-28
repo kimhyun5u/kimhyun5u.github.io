@@ -2,4 +2,5 @@
 layout: page
 title: About
 ---
-<object data="https://github.com/kimhyun5u/kimhyun5u.github.io/files/14785692/-.Google.Docs.pdf" type="application/pdf" width="100%" height="600"></object>
+
+<object data="/assets/portfoilo.pdf" type="application/pdf" width="100%" height="600"></object>
