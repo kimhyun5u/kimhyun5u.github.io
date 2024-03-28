@@ -2,7 +2,7 @@
 # https://github.com/riggraz/no-style-please#customize-the-menu
 
 entries:
-  - title: me
+  - title: <a href='/about'>me</a>
     entries:
       - title: <a href="mailto:22kimhyun5u@gmail.com?Subject=Hello" target="_top">email</a>
       - title: <a href='https://github.com/kimhyun5u'>github</a>
