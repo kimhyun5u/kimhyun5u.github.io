@@ -13,8 +13,9 @@ HLS를 사용하는 기존 스트리밍 서비스의 지연 시간(20s)을 해�
 
 ### P2P
 
+<center>
 <p>
-    <img src="https://private-user-images.githubusercontent.com/38347891/327313964-2b0e7298-d854-4da9-9a73-013b29dd10f9.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTQ2NTQ1ODMsIm5iZiI6MTcxNDY1NDI4MywicGF0aCI6Ii8zODM0Nzg5MS8zMjczMTM5NjQtMmIwZTcyOTgtZDg1NC00ZGE5LTlhNzMtMDEzYjI5ZGQxMGY5LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA1MDIlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNTAyVDEyNTEyM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWMzNDYyMmYxYTdhNWU2NGE4OWIwYmRmODM1MWZiMmVjODI5NjJiODhjNzBiMzA5NWQ1NWYyYjNmNGFlZjdmMWEmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.Np4pQwc1JaUzLOe97tBpyRKEIah0eSDcjlGWkeVz-i0" alt>
+    <img src="https://kimhyun5u.github.io/assets/img/p2p.png" alt>
     <em>Live Streaming On WebRTC P2P 구조</em>
 </p>
 
