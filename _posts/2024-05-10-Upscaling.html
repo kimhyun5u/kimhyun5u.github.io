@@ -1,0 +1,72 @@
+---
+layout: page
+title: "Upscaling"
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <input type="file" id="file" />
+    <div id="indicator"></div>
+    <table>
+      <tr>
+        <th>before</th>
+        <th>after</th>
+      </tr>
+      <tr>
+        <td>
+          <img id="before" />
+        </td>
+        <td>
+          <img id="after" />
+        </td>
+      </tr>
+    </table>
+  </body>
+  <!-- Upscaler.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@upscalerjs/default-model@latest/dist/umd/index.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/upscaler@latest/dist/browser/umd/upscaler.min.js"></script>
+  <!-- model -->
+  <script src="https://cdn.jsdelivr.net/npm/@upscalerjs/esrgan-thick@latest/dist/umd/4x.min.js"></script>
+  <!-- loads the 2x model -->
+  <script src="https://cdn.jsdelivr.net/npm/upscaler@latest/dist/browser/umd/upscaler.min.js"></script>
+  <script>
+    const upscaler = new Upscaler({
+      model: ESRGANThick4x,
+    })
+
+    // handle input image
+    const beforeImageEl = document.getElementById("before")
+    const afterImageEl = document.getElementById("after")
+
+    // handle indicator
+    const indicatorEl = document.getElementById("indicator")
+
+    // handling input image
+    const inputEl = document.getElementById("file")
+    inputEl.addEventListener("input", (e) => {
+      indicatorEl.innerHTML = "Upscaling..."
+      const file = e.target.files[0]
+      // show image preview
+      beforeImageEl.src = URL.createObjectURL(file)
+      const reader = new FileReader()
+      reader.onload = (e) => {
+        upscaler
+          .upscale(e.target.result, {
+            patchSize: 2048,
+            padding: 4,
+          })
+          .then((result) => {
+            indicatorEl.innerHTML = "Upscaling Done 🎉"
+            afterImageEl.src = result
+          })
+      }
+      reader.readAsDataURL(file)
+    })
+  </script>
+</html>
